@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-//import 'package:provider/provider.dart';
-//import '../providers/user_provider.dart';
-//import '../providers/timer_provider.dart';
+
+// Existing screens
 import 'timer_screen.dart';
 import 'forest_screen.dart';
 import 'stats_screen.dart';
 import 'settings_screen.dart';
+
+// NEW: Journal screen
+import 'journal_home_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -21,6 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const TimerScreen(),
     const ForestScreen(),
     const StatsScreen(),
+    const JournalHomeScreen(),  // NEW: Journal tab
     const SettingsScreen(),
   ];
 
@@ -53,6 +56,10 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.bar_chart),
             label: 'Stats',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.book),      // NEW: Journal icon
+            label: 'Journal',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
